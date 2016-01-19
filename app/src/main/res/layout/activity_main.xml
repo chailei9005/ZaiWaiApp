@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeeeee"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="发现"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"
+            android:layout_centerVertical="true"
+            android:text="动态"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:text="发动态"/>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_contain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+   <RadioGroup
+       android:id="@+id/main_radioGroup"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+
+       <RadioButton
+           android:id="@+id/main_tab_feed"
+           android:drawableBottom="@drawable/main_tab_feed_select"
+           style="@style/MainTabStyle"/>
+       <RadioButton
+           android:id="@+id/main_tab_found"
+           android:drawableBottom="@drawable/main_tab_found_select"
+           style="@style/MainTabStyle"/>
+       <RadioButton
+           android:id="@+id/main_tab_event"
+           android:drawableBottom="@drawable/main_tab_event_select"
+           style="@style/MainTabStyle"/>
+       <RadioButton
+           android:id="@+id/main_tab_notify"
+           android:drawableBottom="@drawable/main_tab_notify_select"
+           style="@style/MainTabStyle"/>
+       <RadioButton
+           android:id="@+id/main_tab_mine"
+           android:drawableBottom="@drawable/main_tab_mine_select"
+           style="@style/MainTabStyle"/>
+   </RadioGroup>
+
+
+</LinearLayout>
