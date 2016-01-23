@@ -1,5 +1,6 @@
 package chailei.com.zaiwaiapp.entitys;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -651,7 +652,7 @@ public class HotEntity {
             }
         }
 
-        public static class PictureListEntity {
+        public static class PictureListEntity implements Serializable{
             private long id;
             private double lng;
             private double lat;

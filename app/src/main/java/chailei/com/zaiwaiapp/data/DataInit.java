@@ -14,7 +14,7 @@ public class DataInit {
         list = new ArrayList<>();
         list.add(new DataEntity("关注","feedService","findCustomerFeedListForUser"));
         list.add(new DataEntity("热门","recommendFeedService","findRecommendCustomerFeedListBySourceUserId"));
-//        list.add(new DataEntity("附近","feedService","findCustomerFeedListByLocation"));
+        list.add(new DataEntity("附近","feedService","findCustomerFeedListByLocation"));
 
     }
     public static List<DataEntity> getFeedList(){

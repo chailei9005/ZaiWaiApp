@@ -22,7 +22,8 @@ public class ServiceUtils {
             Call<HotEntity> getHotEntityList(@Path("type") String recommend,
                                              @Path("user") String user,
                                              @Query("sToken") long token,
-                                             @Query("sourceUserId") long userId);
+                                             @Query("sourceUserId") long sourceUserId,
+                                             @Query("userId") long userId );
     }
     public static ZaiWaiService hotService;
     static {

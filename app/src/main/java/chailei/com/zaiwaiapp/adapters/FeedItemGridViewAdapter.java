@@ -2,6 +2,7 @@ package chailei.com.zaiwaiapp.adapters;
 
 import android.content.Context;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import chailei.com.zaiwaiapp.R;
+import chailei.com.zaiwaiapp.customs.CustomImageView;
 import chailei.com.zaiwaiapp.entitys.HotEntity;
 
 /**
@@ -50,19 +52,22 @@ public class FeedItemGridViewAdapter extends BaseAdapter {
         }
         GridViewHolder holder = (GridViewHolder) convertView.getTag();
         HotEntity.CustomerFeedListEntity.PictureListEntity item = list.get(position);
+        String format = String.format("http://appimg.zaiwai.com%s!width%d", item.getUrl(), 720);
+        Log.d("format","format="+format);
         Picasso.with(context)
-                .load(Uri.parse(String.format("http://appimg.zaiwai.com%s!%d",item.getUrl(),item.getWidth())))
-                .resize(200,200)
+                .load(Uri.parse(format))
+                .resize(200, 200)
+                .placeholder(R.mipmap.zaiwai_logo)
                 .into(holder.mImage);
 
         return convertView;
     }
     public static class GridViewHolder{
 
-        private final ImageView mImage;
+        private final CustomImageView mImage;
 
         public GridViewHolder(View view) {
-            mImage = (ImageView) view.findViewById(R.id.feed_sub_item_image);
+            mImage = (CustomImageView) view.findViewById(R.id.feed_sub_item_image);
 
         }
     }

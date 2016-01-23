@@ -39,6 +39,7 @@ public class FeedFragment extends Fragment {
         FeedFragmentAdapter adapter = new FeedFragmentAdapter(getChildFragmentManager(), DataInit.getFeedList());
         pager.setAdapter(adapter);
         tab.setupWithViewPager(pager);
+        pager.setCurrentItem(1,true);
 
     }
 }
