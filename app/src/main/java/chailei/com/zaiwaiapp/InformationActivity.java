@@ -40,6 +40,7 @@ public class InformationActivity extends AppCompatActivity {
         ActionBar bar = getSupportActionBar();
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setTitle("帖子详情");
+
         info_listView = (ListView) findViewById(R.id.info_listView);
         List<String> list =new ArrayList<>();
         for (int i = 0; i < 30; i++) {
